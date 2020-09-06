@@ -1,0 +1,19 @@
+#MenuBar {
+    position: fixed;
+}
+
+#Header {
+    color: black;
+}
+
+#Iam {
+    color: blue;
+}
+
+#Dogs {
+    color: red;
+}
+
+#Contacts {
+    color: green;
+}
