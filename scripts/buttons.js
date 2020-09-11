@@ -28,6 +28,6 @@ $('button').click(function() {
     var section = thisButton.substring(0, thisButton.length - 6);
 
     $('html, body').animate({
-        scrollTop: $('[name="' + section + '"]').offset().top
+        scrollTop: $('#' + section).offset().top
     }, 2000);
 });
