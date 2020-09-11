@@ -22,3 +22,12 @@ $('[name="ContactsButton"]').click(function() {
             scrollTop: $('[name="teste"]').offset().top
         }, 2000);
     });
+
+$('button').click(function() {
+    var thisButton = $(this).name;
+    var section = thisButton.substring(0, thisButton.length - 6);
+
+    $('html, body').animate({
+        scrollTop: $('[name="' + section + '"]').offset().top
+    }, 2000);
+});

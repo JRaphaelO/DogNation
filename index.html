@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DogNation</title>
 
+
      <!--Bootstrap and Fonts -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&family=Roboto:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
 
      <!--JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -22,9 +26,9 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
         
-     <!--DogNation's CSS and scripts -->
-    <link rel="stylesheet" href="/styles/buttons.css">
+    <!--DogNation's CSS and scripts -->
     <link rel="stylesheet" href="/styles/sections.css">
+    <link rel="stylesheet" href="/styles/buttons.css">
     <link rel="stylesheet" href="styles/miscellanous.css">
     <script src="scripts/buttons.js" charset="utf-8"></script>
 
@@ -32,24 +36,24 @@
 
 <body>
     <section id="Menu">
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#F08080" id="MenuBar">
-            <h2>DogNation</h2>
+        <nav class="navbar navbar-expand-lg navbar-dark" id="MenuBar">
+            <div class="logo">
+                <img src="/public/logo_one.png" alt="logo">
+                <h2>DogNation</h2>
+            </div> 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto" style="margin-left: 25px;">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" name="HeaderButton">Header</i></a>
+                        <a class="nav-link" href="#Iam" name="IamButton">Who are we?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" name="IamButton">Who are we?</a>
+                        <a class="nav-link" href="#Dogs" name="DogsButton">Dogs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" name="DogsButton">Dogs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" name="ContactsButton">Contacts</i></a>
+                        <a class="nav-link" href="#Contacts" name="ContactsButton">Contacts</i></a>
                     </li>
                 </ul>
             </div>
@@ -57,24 +61,35 @@
     </section>
 
     <section id="Header">
-        <h1 name="Header">Test1</h1>
-        <h1>Test1</h1>
-        <h1>Test1</h1>
-        <h1>Test1</h1>
-        <h1>Test1</h1>
-        <h1>Test1</h1>
-        <h1>Test1</h1>
-        <h1>Test1</h1>
-        <h1>Test1</h1>
-        <h1>Test1</h1>
-        <h1>Test1</h1>
-        <h1>Test1</h1>
-        <h1>Test1</h1>
-        <h1>Test1</h1>
-        <h1>Test1</h1>
-        <h1>Test1</h1>
-        <h1>Test1</h1>
-        <h1>Test1</h1>
+        <div class="header-info">
+            <div class="logo">
+                <img src="/public/logo_two.png" alt="logo">
+                <div class="name">
+                    <h1>DogNation</h1>
+                    <h3>Adopt a dog, with just one click.</h3>
+                </div>
+            </div>
+            <div class="info">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Mauris sollicitudin congue ex a tincidunt. 
+                    Nullam fringilla diam non sollicitudin sollicitudin.
+                </p>
+                <div class="socials">
+                    <a class="socials-icon" href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+                    <a class="socials-icon" href="#"><i class="fab fa-instagram-square fa-2x"></i></a>
+                    <a class="socials-icon" href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+                    <a class="socials-icon" href="#"><i class="fab fa-whatsapp-square fa-2x"></i></i></a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="header-imgs">
+            <img src="/public/dog1.png" alt="dog1" class="header-img1">
+            <img src="/public/dog2.png" alt="dog2" class="header-img2">
+        </div>
+            
     </section>
     
     <section id="Iam">
