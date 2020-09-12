@@ -175,36 +175,31 @@
 }
 
 .iam-imgs {
+    margin-left: auto;
+    margin-right: auto;
     min-width: 25%;
-    max-width: 100%;
-    top: 100%;
+    max-width: 75%;
     display: flex;
 }
 
-.iam-img {
-    position: relative;
-    z-index: 2;
-    min-height: 10%;
-    max-height: 75%;
-    min-width: 25%;
-    max-width: 100%;
-    display: flex;
-    left: 15%;
-    
-    border: .5rem solid #E35F21;
-    border-radius: 2rem;
+#mapid { 
+    width: 100%;
+    height: 100%;
+    border: 7px solid #E35F21;
+    border-radius: 1rem;
+    z-index: 4;
 }
 
-.iam-img:hover {
+#mapid:hover {
     border-color: #e27d4e;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1200px) {
     .iam-imgs {
         display: none;
     }
 
-    .iam-img {
+    #mapid {
         display: none;
     }
 }

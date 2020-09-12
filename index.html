@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
 
-     <!--JS, Popper.js, and jQuery -->
+     <!--JS, Popper.js, jQuery and Leaflet -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -25,12 +25,19 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
         
     <!--DogNation's CSS and scripts -->
     <link rel="stylesheet" href="/styles/sections.css">
     <link rel="stylesheet" href="/styles/buttons.css">
     <link rel="stylesheet" href="styles/miscellanous.css">
     <script src="scripts/buttons.js" charset="utf-8"></script>
+    <script src="scripts/map.js" charset="utf-8"></script>
 
 </head>
 
@@ -108,7 +115,22 @@
         </div>
 
         <div class="iam-imgs">
-            <img src="/public/map.png" alt="map" class="iam-img">
+            <div id="mapid"></div>
+            <script>
+                var mymap = L.map('mapid').setView([-7.162453, -34.817977], 18);
+
+                L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 21,
+                id: 'mapbox/streets-v11',
+                tileSize: 512,
+                zoomOffset: -1,
+                accessToken: 'pk.eyJ1IjoicmdvZXMiLCJhIjoiY2tleXlqNGM4MHlvZzMzbWZpajdwcTNhMSJ9.-ZlmDl9sEyHweGZIgkxuXw'
+            }).addTo(mymap);
+
+                var marker = L.marker([-7.162453, -34.817977]).addTo(mymap);
+                marker.bindPopup("<b>DogNation</b><br>This is our location!").openPopup();
+            </script>
         </div>
         
     </section>
