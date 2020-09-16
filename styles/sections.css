@@ -6,7 +6,8 @@ body {
 #MenuBar {
     position: fixed;
     z-index: 5;
-    background-color: #000000;
+    background-color: #000000e5;
+
 
     font-family: 'Rancho', cursive;
     color: #E35F21;
