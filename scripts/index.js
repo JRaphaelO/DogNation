@@ -4,7 +4,7 @@ $(window).scroll(function() {
     var mapScrollPos = $('#mapid').offset().top + $('#mapid').height();
     var mapScrollPosTop = $('#mapid').offset().top;
     console.log('Map: ' + scrollPos, scrollPosBottom, mapScrollPos, mapScrollPosTop);
-
+    
     if (scrollPos > mapScrollPos) {
         $('#mapid').stop().fadeTo(10, 0);
     }
@@ -24,10 +24,10 @@ $(window).scroll(function() {
     console.log('Imgs: ' + scrollPos, scrollPosBottom, imgsScrollPos, imgsScrollPosTop);
 
 
-    if (scrollPos > imgsScrollPos) {
+    if (scrollPos > imgsScrollPos && $(window).width() > 1300) {
         $('.header-imgs').stop().fadeTo(10, 0);
     }
-    else {
+    else if ($(window).width() > 1300) {
         $('.header-imgs').stop().fadeTo(500, 1);
     }
 });
